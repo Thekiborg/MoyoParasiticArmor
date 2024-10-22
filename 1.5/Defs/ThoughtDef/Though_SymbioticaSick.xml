@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <ThoughtDef>
+        <defName>Thek_PlenamStratusSymbiotica_SymbioticaSick</defName>
+        <workerClass>Thek_PSS.ThoughWorker_SymbioticaSick</workerClass>
+        <validWhileDespawned>true</validWhileDespawned>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li> <!-- Incubation stage -->
+                <label>sick?</label>
+                <description>I feel a little more peckish than usual</description>
+                <baseMoodEffect>-0</baseMoodEffect>
+            </li>
+            <li> <!-- First stage -->
+                <label>sick</label>
+                <description>I'm hungry and my whole body hurts</description>
+                <baseMoodEffect>-5</baseMoodEffect>
+            </li>
+            <li> <!-- Second stage -->
+                <label>itchy</label>
+                <description>My skin hurts and itches, it's unbearable.</description>
+                <baseMoodEffect>-8</baseMoodEffect>
+            </li>
+            <li> <!-- Third stage -->
+                <label>recovering</label>
+                <description>My body doesn't ache as much anymore. Howerver, I have a sudden urge to fight...</description>
+                <baseMoodEffect>-8</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+</Defs>

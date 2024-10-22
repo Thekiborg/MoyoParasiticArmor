@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThinkTreeDef[defName="MentalStateCritical"]/thinkRoot/subNodes</xpath>
+        <value>
+            <li Class="ThinkNode_ConditionalMentalState"> 
+                <state>Thek_PlenamStratusSymbiotica_SymbioticBerserk</state>
+                <subNodes>
+                    <li Class="Thek_PSS.ThinkNode_ChancePerCustomTicks">
+                    <subNodes>
+                      <li Class="ThinkNode_PrioritySorter"> 
+                        <subNodes>
+                            <li Class="JobGiver_GetFood"/>
+                            <li Class="Thek_PSS.JobGiver_SymbioticBerserk" />
+                        </subNodes>
+                      </li>
+                    </subNodes>
+                    </li>
+                    <li Class="JobGiver_WanderAnywhere">
+                        <maxDanger>Deadly</maxDanger>
+                    </li>
+                </subNodes>
+              </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThinkTreeDef[defName="MentalStateCritical"]/modExtensions</xpath>
+        <nomatch Class="PatchOperationAdd">
+          <xpath>Defs/ThinkTreeDef[defName="MentalStateCritical"]</xpath>
+          <value>
+            <modExtensions />
+          </value>
+        </nomatch>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThinkTreeDef[defName="MentalStateCritical"]/modExtensions</xpath>
+        <value>
+            <li Class="Thek_PSS.PlenamStratusSymbiotica_ModExtension">
+              <mtbHours>1</mtbHours>
+              <runInterval>2500</runInterval>
+            </li>
+        </value>
+    </Operation>
+
+</Patch>

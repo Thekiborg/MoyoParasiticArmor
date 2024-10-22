@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <ThingDef ParentName="DrugBase">
+        <defName>Thek_PSS_Injector</defName>
+        <label>PSS Injector</label>
+        <description>A strange opaque vial with a needle on one end, seemingly an injector of some sort.\n\nThe information printed on the vial hints at it being some sort of medical experiment, developed in the Lighthouse. This vial was likely stolen during the civil war.\n\nA damaged label is barely readable:\n"... biological ... Lighthouse soldiers ... only ... Moyo."</description>
+        <graphicData>
+          <texPath>PSSInjector/PSSInjector</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <statBases>
+          <MarketValue>70</MarketValue>
+          <Mass>0.01</Mass>
+        </statBases>
+        <techLevel>Ultra</techLevel>
+        <minRewardCount>1</minRewardCount>
+        <stackLimit>1</stackLimit>
+        <ingestible>
+          <foodType>Processed</foodType>
+          <ingestSound>Ingest_Inject</ingestSound>
+          <ingestCommandString>Inject {0}</ingestCommandString>
+          <ingestReportString>Injecting {0}.</ingestReportString>
+          <useEatingSpeedStat>false</useEatingSpeedStat>
+          <chairSearchRadius>0</chairSearchRadius>
+          <outcomeDoers>
+            <li Class="Thek_PSS.IngestionOutcomeDoer_GiveHediffSymbiotica">
+              <hediffDef>Thek_PlenamStratusSymbiotica</hediffDef>
+            </li>
+          </outcomeDoers>
+        </ingestible>
+        <tradeTags>
+          <li>ExoticMisc</li>
+        </tradeTags>
+        <thingSetMakerTags><li>RewardStandardCore</li></thingSetMakerTags>
+        <allowedArchonexusCount>50</allowedArchonexusCount>
+      </ThingDef>
+
+</Defs>

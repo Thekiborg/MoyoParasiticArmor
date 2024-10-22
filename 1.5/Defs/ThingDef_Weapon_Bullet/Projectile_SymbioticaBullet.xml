@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <ThingDef ParentName="BaseBullet">
+        <defName>Thek_PlenamStratusSymbiotica_SymbioticaBullet</defName>
+        <label>parasite bullet</label>
+        <graphicData>
+          <texPath>Weapon/WarpedBullet</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>2</drawSize>
+        </graphicData>
+        <projectile>
+          <damageDef>Thek_PlenamStratusSymbiotica_SymbioticaDamage</damageDef>
+          <damageAmountBase>36</damageAmountBase>
+          <armorPenetrationBase>0.62</armorPenetrationBase>
+          <stoppingPower>3</stoppingPower>
+          <speed>120</speed>
+        </projectile>
+      </ThingDef>
+
+      <DamageDef ParentName="Bullet">
+        <defName>Thek_PlenamStratusSymbiotica_SymbioticaDamage</defName>
+        <label>propelled stinger</label>
+        <buildingDamageFactorImpassable>2</buildingDamageFactorImpassable>
+        <buildingDamageFactorPassable>2</buildingDamageFactorPassable>
+        <plantDamageFactor>2</plantDamageFactor>
+      </DamageDef>
+</Defs>

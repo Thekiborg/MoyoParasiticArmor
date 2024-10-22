@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <JobDef>
+        <defName>Thek_PlenamStratusSymbiotica_SymbioticBerserk</defName>
+        <driverClass>Thek_PSS.JobDriver_SymbioticBerserk</driverClass>
+        <reportString>attacking TargetA.</reportString>
+        <allowOpportunisticPrefix>true</allowOpportunisticPrefix>
+        <alwaysShowWeapon>true</alwaysShowWeapon>
+        <casualInterruptible>false</casualInterruptible>
+        <collideWithPawns>true</collideWithPawns>
+        <checkOverrideOnDamage>Never</checkOverrideOnDamage>
+        <modExtensions>
+            <li Class="Thek_PSS.PlenamStratusSymbiotica_ModExtension">
+              <numberOfAttacks>3</numberOfAttacks>
+            </li>
+        </modExtensions>
+    </JobDef>
+
+</Defs>

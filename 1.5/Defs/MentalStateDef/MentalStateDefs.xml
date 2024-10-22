@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <MentalStateDef ParentName="BaseMentalState">
+        <defName>Thek_PlenamStratusSymbiotica_SymbioticBerserk</defName>
+        <label>confused wandering</label>
+        <stateClass>Thek_PSS.MentalState_SymbioticBerserk</stateClass>
+        <category>Misc</category>
+        <minTicksBeforeRecovery>60000</minTicksBeforeRecovery>
+        <maxTicksBeforeRecovery>120000</maxTicksBeforeRecovery>
+        <recoveryMtbDays>0.0</recoveryMtbDays>
+        <blockNormalThoughts>true</blockNormalThoughts>
+        <nameColor>(141, 104, 212)</nameColor>
+        <beginLetterLabel>Parasitic Rage</beginLetterLabel>
+        <beginLetter>{0}'s parasite has taken control over [PAWN_objective]. They are wandering around attacking everyone on sight.</beginLetter>
+        <beginLetterDef>Thek_PlenamStratusSymbiotica_SymbioticaLetter</beginLetterDef>
+        <recoveryMessage>{0} has gained control back over [PAWN_objective] body.</recoveryMessage>
+        <baseInspectLine>Mental state: Wandering and attacking on sight.</baseInspectLine>
+        <inCaravanCanDo>true</inCaravanCanDo>
+    </MentalStateDef> 
+
+</Defs>

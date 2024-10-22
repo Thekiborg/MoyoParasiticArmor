@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <LetterDef>
+        <defName>Thek_PlenamStratusSymbiotica_SymbioticaLetter</defName>
+        <color>(92, 35, 200)</color>
+        <flashColor>(127, 81, 214)</flashColor>
+        <flashInterval>90</flashInterval>
+        <arriveSound>LetterArrive</arriveSound>
+      </LetterDef>
+
+</Defs>

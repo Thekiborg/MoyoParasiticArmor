@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <ThingDef Name="ApparelSymbioticaBase" ParentName="ApparelNoQualityBase" Abstract="true">
+      <description>todo</description>
+      <techLevel>Ultra</techLevel>
+      <thingClass>Thek_PSS.ThingClass_SymbioticaApparel</thingClass>
+      <smeltable>false</smeltable>
+      <useHitPoints>false</useHitPoints>
+      <statBases>
+        <EquipDelay>69</EquipDelay>
+        <Mass>1</Mass>
+        <Flammability>0</Flammability>
+        <ArmorRating_Sharp>1.45</ArmorRating_Sharp>
+        <ArmorRating_Blunt>0.63</ArmorRating_Blunt>
+        <ArmorRating_Heat>0.40</ArmorRating_Heat>
+        <Insulation_Cold>65</Insulation_Cold>
+        <Insulation_Heat>43</Insulation_Heat>
+        <DeteriorationRate>0</DeteriorationRate>
+      </statBases>
+      <destroyOnDrop>true</destroyOnDrop>
+      <tradeability>None</tradeability>
+      <comps Inherit="false">
+        <li Class="CompProperties_Forbiddable"/>
+      </comps>
+      <modExtensions>
+        <li Class="Thek_PSS.PlenamStratusSymbiotica_ModExtension">
+          <isGrownEquipment>true</isGrownEquipment>
+        </li>
+      </modExtensions>
+    </ThingDef>
+
+    <!-- Chest Piece -->
+
+    <ThingDef ParentName="ApparelSymbioticaBase">
+        <defName>Thek_PlenamStratusSymbiotica_SymbioticaArmor</defName>
+        <label>parasite armor</label>
+        <graphicData>
+          <texPath>Apparel/WarpedArmorIcon</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <equippedStatOffsets>
+          <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.3</SlaveSuppressionOffset>
+        </equippedStatOffsets>
+        <apparel>
+          <renderNodeProperties>
+            <li>
+              <visibleFacing>
+                <li>East</li>
+                <li>South</li>
+                <li>West</li>
+                <li>North</li>
+              </visibleFacing>
+              <workerClass>PawnRenderNodeWorker_Apparel_Body</workerClass>
+              <nodeClass>PawnRenderNode_Apparel</nodeClass>
+              <bodyTypeGraphicPaths>
+                <Male>Apparel/Armor/WarpedArmor_Male</Male>
+                <Female>Apparel/Armor/WarpedArmor_Female</Female>
+                <Hulk>Apparel/Armor/WarpedArmor_Hulk</Hulk>
+                <Fat>Apparel/Armor/WarpedArmor_Fat</Fat>
+                <Thin>Apparel/Armor/WarpedArmor_Thin</Thin>
+              </bodyTypeGraphicPaths>
+              <baseLayer>20</baseLayer>
+              <subworkerClasses>
+                <li>Thek_PSS.PawnRenderSubWorker_Symbiotica</li>
+              </subworkerClasses>
+            </li>
+          </renderNodeProperties>
+          <bodyPartGroups>
+            <li>Torso</li>
+            <li>Neck</li>
+            <li>Shoulders</li>
+            <li>Arms</li>
+            <li>Legs</li>
+          </bodyPartGroups>
+          <wornGraphicPath>Apparel/Armor/WarpedArmor</wornGraphicPath>
+          <layers>
+            <li>OnSkin</li>
+            <li>Middle</li>
+            <li>Shell</li>
+          </layers>
+          <useDeflectMetalEffect>true</useDeflectMetalEffect>
+        </apparel>
+      </ThingDef>
+
+      <!-- Head Piece -->
+
+      <ThingDef ParentName="ApparelSymbioticaBase">
+        <defName>Thek_PlenamStratusSymbiotica_SymbioticaHelmet</defName>
+        <label>parasite helmet</label>
+        <graphicData>
+          <texPath>Apparel/WarpedHelmetIcon</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <uiIconScale>1.25</uiIconScale>
+        <equippedStatOffsets>
+          <SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.1</SlaveSuppressionOffset>
+        </equippedStatOffsets>
+        <apparel>
+          <renderNodeProperties>
+            <li>
+              <visibleFacing>
+                <li>East</li>
+                <li>South</li>
+                <li>West</li>
+                <li>North</li>
+              </visibleFacing>
+              <workerClass>PawnRenderNodeWorker_Apparel_Head</workerClass>
+              <nodeClass>PawnRenderNode_Apparel</nodeClass>
+              <texPath>Apparel/Helmet/WarpedHelmet</texPath>
+              <baseLayer>70</baseLayer>
+              <subworkerClasses>
+                <li>Thek_PSS.PawnRenderSubWorker_Symbiotica</li>
+              </subworkerClasses>
+            </li>
+          </renderNodeProperties>
+          <bodyPartGroups>
+            <li>FullHead</li>
+          </bodyPartGroups>
+          <wornGraphicPath>Apparel/Helmet/WarpedHelmet</wornGraphicPath>
+          <layers>
+            <li>Overhead</li>
+          </layers>
+          <useDeflectMetalEffect>true</useDeflectMetalEffect>
+          <forceEyesVisibleForRotations>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+          </forceEyesVisibleForRotations>
+        </apparel>
+      </ThingDef>
+</Defs>

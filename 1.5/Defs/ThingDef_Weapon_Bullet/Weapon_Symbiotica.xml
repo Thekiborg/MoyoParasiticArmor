@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+    <ThingDef ParentName="BaseGun">
+        <defName>Thek_PlenamStratusSymbiotica_SymbioticaGun</defName>
+        <label>parasite rifle</label>
+        <description>todo</description>
+        <techLevel>Ultra</techLevel>
+        <smeltable>false</smeltable>
+        <destroyOnDrop>true</destroyOnDrop>
+        <tradeability>None</tradeability>
+        <useHitPoints>false</useHitPoints>
+        <graphicData>
+          <texPath>Weapon/WarpedGun_B</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <drawSize>(1.2, 1.2)</drawSize>
+        </graphicData>
+        <soundInteract>Interact_SMG</soundInteract>
+        <statBases>
+          <Mass>3.5</Mass>
+          <AccuracyTouch>0.64</AccuracyTouch>
+          <AccuracyShort>0.91</AccuracyShort>
+          <AccuracyMedium>1</AccuracyMedium>
+          <AccuracyLong>0.87</AccuracyLong>
+          <RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown>
+        </statBases>
+        <verbs>
+          <li>
+            <verbClass>Verb_Shoot</verbClass>
+            <hasStandardCommand>true</hasStandardCommand>
+            <defaultProjectile>Thek_PlenamStratusSymbiotica_SymbioticaBullet</defaultProjectile>
+            <warmupTime>3</warmupTime>
+            <range>50.9</range>
+            <soundCast>Shot_HeavySMG</soundCast>
+            <soundCastTail>GunTail_Heavy</soundCastTail>
+            <muzzleFlashScale>9</muzzleFlashScale>
+          </li>
+        </verbs>
+        <tools>
+          <li>
+            <label>body</label>
+            <capacities>
+              <li>Blunt</li>
+            </capacities>
+            <power>9</power>
+            <cooldownTime>2</cooldownTime>
+          </li>
+          <li>
+            <label>grip</label>
+            <capacities>
+              <li>Blunt</li>
+            </capacities>
+            <power>9</power>
+            <cooldownTime>2</cooldownTime>
+          </li>
+        </tools>
+        <equippedStatOffsets>
+          <ShootingAccuracyPawn>3</ShootingAccuracyPawn>
+        </equippedStatOffsets>	
+        <comps>
+          <li Class="Thek_PSS.CompProperties_IncreaseSeverityPerShot">
+            <hediffDefToIncrease>BloodLoss</hediffDefToIncrease>
+            <severityIncreasePerShot>0.05</severityIncreasePerShot>
+          </li>
+        </comps>
+        <modExtensions>
+          <li Class="Thek_PSS.PlenamStratusSymbiotica_ModExtension">
+            <isGrownEquipment>true</isGrownEquipment>
+          </li>
+        </modExtensions>
+      </ThingDef>
+</Defs>

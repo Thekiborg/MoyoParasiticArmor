@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+    <Thek_PlenamStratusSymbiotica_ArmorLocked>{0} can't seem to take this off.</Thek_PlenamStratusSymbiotica_ArmorLocked>
+    <Thek_PlenamStratusSymbiotica_WeaponLocked>{0} can't seem to let go of this.</Thek_PlenamStratusSymbiotica_WeaponLocked>
+
+    <Thek_PlenamStratusSymbiotica_SymbioticaInjectedLetter_Label>PSS-Injector</Thek_PlenamStratusSymbiotica_SymbioticaInjectedLetter_Label>
+
+    <Thek_PlenamStratusSymbiotica_SymbioticaInjectedLetter_Body>{PAWN_nameDef} has used the PSS-Injector and reports not feeling any different. {DOCTOR_nameDef} suggests that we keep an eye on {PAWN_objective} to monitor for any delayed effects.</Thek_PlenamStratusSymbiotica_SymbioticaInjectedLetter_Body>
+    <Thek_PlenamStratusSymbiotica_FirstStageLetter_Body>{PAWN_nameDef} has progressively been getting hungrier and {PAWN_objective} skin has started showing signs of flaking.</Thek_PlenamStratusSymbiotica_FirstStageLetter_Body>
+    <Thek_PlenamStratusSymbiotica_SecondStageLetter_Body>{PAWN_nameDef}'s body is starting to painfully change. Furthermore, {PAWN_objective} skin has gotten course and rough, and {PAWN_pronoun} has been scratching {PAWN_objective}self a lot.</Thek_PlenamStratusSymbiotica_SecondStageLetter_Body>
+    <Thek_PlenamStratusSymbiotica_ThirdStageLetter_Body>The changes on {PAWN_nameDef}'s body seem to be ending with the pain diminishing. They've undergone a drastic change.\n\n{DOCTOR_nameDef} has been looking into the PSS-injector and believes it to be a symbiotic organism which feeds exclusively on the moyo but applies powerful upgrades to the host, changes the lighthouse doctors could not control.\n\n{DOCTOR_pronoun} has also determined PSS to be an acronym meaning “Plenam Stratum Symbiotica”, latin for “A full symbiotic layer”, which describes the effects suffered by {PAWN_nameDef}.</Thek_PlenamStratusSymbiotica_ThirdStageLetter_Body>
+
+    <Thek_PlenamStratusSymbiotica_ProgressedStageMessage>{PAWN_nameDef}'s PSS symptoms have progressed.</Thek_PlenamStratusSymbiotica_ProgressedStageMessage>
+
+    <PlenamStratusSymbiotica_CannotTend>Cannot tend {TARGETPAWN_nameDef}; the shell covering doesn't allow it.</PlenamStratusSymbiotica_CannotTend>
+    <PlenamStratusSymbiotica_CannotDropEquipment>{PAWN_nameDef} can't seem to let go of this.</PlenamStratusSymbiotica_CannotDropEquipment>
+    <!--<PlenamStratusSymbiotica_CannotStrip>{PAWN_nameDef} can't seem to be able to take {TARGETPAWN_nameDef}'s gear off.</PlenamStratusSymbiotica_CannotStrip>-->
+    <PlenamStratusSymbiotica_CannotEquip>{PAWN_nameDef} can't seem to let go of {PAWN_possessive} current weapon.</PlenamStratusSymbiotica_CannotEquip>
+
+    <PlenamStratusSymbiotica_RegeneratedPartMessage>{PAWN_labelShort}'s {2} has grown back. Cause: {0}</PlenamStratusSymbiotica_RegeneratedPartMessage>
+</LanguageData>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+<!--  -->
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Moyo"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[name="glow(body)"
+            or name="moyo left antennae" or name="glow(moyo left antennae)" or name="moyo right antennae"
+            or name="glow(moyo right antennae)" or name="hair" or name="hair(back)" or name="glow(face)"]/conditions
+        </xpath>
+        <value>
+            <DontShowWithPSSstage5 />
+        </value>
+      </Operation>
+
+</Patch>

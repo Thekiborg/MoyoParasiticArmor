@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+      <DamageDef>
+        <defName>Thek_PlenamStratusSymbiotica_SelfScratch</defName>
+        <label>scratch</label>
+        <workerClass>DamageWorker_Cut</workerClass>
+        <externalViolence>false</externalViolence>
+        <deathMessage>{0} has scratched themselves to death.</deathMessage>
+        <hediff>Thek_PlenamStratusSymbiotica_SelfScratch</hediff>
+        <hediffSolid>Thek_PlenamStratusSymbiotica_SelfScratch</hediffSolid>
+        <harmAllLayersUntilOutside>false</harmAllLayersUntilOutside>
+        <impactSoundType>Slice</impactSoundType>
+        <armorCategory>Sharp</armorCategory>
+      </DamageDef>
+
+</Defs>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<HediffDef Name="Symbiotica_Progression_Base" Abstract="True">
+		<hediffClass>Thek_PSS.HediffClass_SymbioticaProgression</hediffClass>
+		<makesSickThought>false</makesSickThought>
+		<makesAlert>false</makesAlert>
+		<minSeverity>0.001</minSeverity>
+		<maxSeverity>60.01</maxSeverity> <!-- Max number of days the progression will take -->
+		<initialSeverity>0.001</initialSeverity>
+		<tendable>false</tendable>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>1</severityPerDay> <!-- 60 days -->
+			</li>
+			<li Class="Thek_PSS.HediffCompProperties_SelfScratch">
+				<stageIndicesToRun>
+					<li>3</li>
+				</stageIndicesToRun>
+				<ticksBetweenScratches>30000~40000</ticksBetweenScratches> <!-- 12 - 16 hours-->
+				<amountOfInjuries>5</amountOfInjuries>
+			</li>
+			<li Class="Thek_PSS.HediffCompProperties_MentalStateChance">
+				<stageIndicesToRun>
+					<li>4</li>
+					<li>5</li>
+				</stageIndicesToRun>
+				<ticksToTrigger>60000</ticksToTrigger>
+				<chanceToApply>0.3</chanceToApply>
+				<mentalStateToApply>Thek_PlenamStratusSymbiotica_SymbioticBerserk</mentalStateToApply>
+			</li>
+			<li Class="Thek_PSS.HediffCompProperties_SymbioticRegeneration">
+				<stageIndicesToRun>
+					<li>5</li>
+				</stageIndicesToRun>
+				<ticksToPassToRegen>20000</ticksToPassToRegen>
+			</li>
+		</comps>
+		<modExtensions>
+			<li Class="Thek_PSS.PlenamStratusSymbiotica_ModExtension">
+				<SymbioticaOnStageIndexChangedActions>
+					<li>
+						<stageIndex>1</stageIndex>
+						<happensOnWild>true</happensOnWild>
+						<sendsLetter>true</sendsLetter>
+						<letterAndMessageConfig>
+							<letterBody>Thek_PlenamStratusSymbiotica_SymbioticaInjectedLetter_Body</letterBody>
+						</letterAndMessageConfig>
+					</li>
+					<li>
+						<stageIndex>2</stageIndex>
+						<happensOnWild>true</happensOnWild>
+						<sendsLetter>true</sendsLetter>
+						<letterAndMessageConfig>
+							<letterBody>Thek_PlenamStratusSymbiotica_FirstStageLetter_Body</letterBody>
+						</letterAndMessageConfig>
+					</li>
+					<li>
+						<stageIndex>3</stageIndex>
+						<happensOnWild>true</happensOnWild>
+						<sendsLetter>true</sendsLetter>
+						<letterAndMessageConfig>
+							<letterBody>Thek_PlenamStratusSymbiotica_SecondStageLetter_Body</letterBody>
+						</letterAndMessageConfig>
+					</li>
+					<li>
+						<stageIndex>4</stageIndex>
+						<happensOnWild>true</happensOnWild>
+						<sendsLetter>true</sendsLetter>
+						<letterAndMessageConfig>
+							<letterBody>Thek_PlenamStratusSymbiotica_ThirdStageLetter_Body</letterBody>
+						</letterAndMessageConfig>
+					</li>
+					<li>
+						<stageIndex>5</stageIndex>
+						<happensOnWild>true</happensOnWild>
+						<appliesSet>true</appliesSet>
+						<grownSet>
+							<listOfApparelToGrow>
+								<li>Thek_PlenamStratusSymbiotica_SymbioticaHelmet</li>
+								<li>Thek_PlenamStratusSymbiotica_SymbioticaArmor</li>
+							  </listOfApparelToGrow>
+							  <weaponToGrow>Thek_PlenamStratusSymbiotica_SymbioticaGun</weaponToGrow>
+						</grownSet>
+					</li>
+				</SymbioticaOnStageIndexChangedActions>
+				<controlledSymbionteStages>
+					<!-- Stage before the first one so OnStageIndexChanged sends the letter -->
+					<!-- Index 0 -->
+					<li>
+						<overrideLabel>???</overrideLabel>
+						<label>???</label>
+						<becomeVisible>true</becomeVisible>
+						<painOffset>0.11</painOffset>
+					</li>
+					<!-- Incubation - 10 days -->
+					<!-- Index 1 -->
+					<li>
+						<overrideLabel>???</overrideLabel>
+						<label>Incubation</label>
+						<becomeVisible>true</becomeVisible>
+						<minSeverity>0.01</minSeverity>
+						<painOffset>0.6</painOffset>
+					</li>
+				</controlledSymbionteStages>
+			</li>
+		</modExtensions>
+	</HediffDef>
+
+
+	<HediffDef ParentName="Symbiotica_Progression_Base">
+		<defName>Thek_PlenamStratusSymbiotica</defName>
+		<label>Symbiotica Progression</label>
+		<description>-</description>
+		<stages>
+			<!-- Stage before the first one so OnStageIndexChanged sends the letter -->
+			<!-- Index 0 -->
+			<li>
+				<overrideLabel>???</overrideLabel>
+				<label>???</label>
+				<becomeVisible>false</becomeVisible>
+			</li>
+			<!-- Incubation - 10 days -->
+			<!-- Index 1 -->
+			<li>
+				<overrideLabel>???</overrideLabel>
+				<label>Incubation</label>
+				<becomeVisible>false</becomeVisible>
+				<minSeverity>0.01</minSeverity>
+				<hungerRateFactorOffset>0.15</hungerRateFactorOffset>
+			</li>
+			<!-- Stage 1 - 15 days -->
+			<!-- Index 2 -->
+			<li>
+				<overrideLabel>???</overrideLabel>
+				<label>Stage 1</label>
+				<becomeVisible>false</becomeVisible>
+				<minSeverity>10.01</minSeverity>
+				<statOffsets>
+					<ArmorRating_Sharp>0.242</ArmorRating_Sharp>
+					<ArmorRating_Blunt>0.105</ArmorRating_Blunt>
+					<ArmorRating_Heat>0.07</ArmorRating_Heat>
+				</statOffsets>
+				<hungerRateFactorOffset>0.40</hungerRateFactorOffset>
+				<painOffset>0.11</painOffset>
+			</li>
+			<!-- Stage 2 - 7 days -->
+			<!-- Index 3 -->
+			<li>
+				<overrideLabel>???</overrideLabel>
+				<label>Stage 2</label>
+				<becomeVisible>false</becomeVisible>
+				<minSeverity>25.01</minSeverity>
+				<statOffsets>
+					<ArmorRating_Sharp>0.967</ArmorRating_Sharp>
+					<ArmorRating_Blunt>0.42</ArmorRating_Blunt>
+					<ArmorRating_Heat>0.267</ArmorRating_Heat>
+				</statOffsets>
+				<painOffset>0.35</painOffset>
+			</li>
+			<!-- Stage 3 - 28 days -->
+			<!-- Index 4 -->
+			<li>
+				<overrideLabel>Plenam Stratus Symbiotica</overrideLabel>
+				<minSeverity>32.01</minSeverity>
+				<statOffsets>
+					<ArmorRating_Sharp>0.967</ArmorRating_Sharp>
+					<ArmorRating_Blunt>0.42</ArmorRating_Blunt>
+					<ArmorRating_Heat>0.267</ArmorRating_Heat>
+				</statOffsets>
+				<painOffset>0.15</painOffset>
+			</li>
+			<!-- Stage 4 - Permanent -->
+			<!-- Index 5 -->
+			 <!-- Armor applies to pawn -->
+			<li>
+				<overrideLabel>Plenam Stratus Symbiotica</overrideLabel>
+				<label>Symbiotic suit</label>
+				<becomeVisible>false</becomeVisible>
+				<minSeverity>60.01</minSeverity>
+				<statFactors>
+					<InjuryHealingFactor>5.0</InjuryHealingFactor>
+					<IncomingDamageFactor>2</IncomingDamageFactor>
+				</statFactors>
+			</li>
+		</stages>
+	  </HediffDef>
+</Defs>

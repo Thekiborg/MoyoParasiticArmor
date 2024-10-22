@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <HediffDef ParentName="InjuryBase">
+        <defName>Thek_PlenamStratusSymbiotica_SelfScratch</defName>
+        <label>scratch</label>
+        <labelNoun>a scratch</labelNoun>
+        <description>A self-inflicted injury from scratching.</description>
+        <comps>
+          <li Class="HediffCompProperties_TendDuration">
+            <labelTendedWell>bandaged</labelTendedWell>
+            <labelTendedWellInner>sutured</labelTendedWellInner>
+            <labelSolidTendedWell>set</labelSolidTendedWell>
+          </li>
+          <li Class="HediffCompProperties_Infecter">
+            <infectionChance>0.15</infectionChance>
+          </li>
+        </comps>
+        <injuryProps>
+          <painPerSeverity>0.0125</painPerSeverity>
+          <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+          <bleedRate>0.06</bleedRate>
+          <canMerge>false</canMerge>
+          <destroyedLabel>Torn off</destroyedLabel>
+          <destroyedOutLabel>Torn out</destroyedOutLabel>
+        </injuryProps>
+      </HediffDef>
+
+</Defs>
